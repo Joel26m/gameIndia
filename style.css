@@ -89,8 +89,10 @@ body {
 }
 .opciones{
   display: flex;
-  gap: 525px;
-  margin-right: 200px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0px 10px 0px 10px;
+  
 }
 
 
