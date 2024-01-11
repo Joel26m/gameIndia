@@ -1,4 +1,3 @@
-
 let cartasFacil = [ 'laia1.png', 'alisha.png', 'laia1.png', 'alisha.png'];
 let cartasNormal = [ '8.png', '2.png', '18.png', '4.png', '8.png', '2.png', '18.png', '4.png'];
 let cartasDificil = ['elefante.gif', '3.gif', '4.gif', 'flor.gif', 'mujer.gif', 'sol.gif',  'elefante.gif', '3.gif', '4.gif', 'flor.gif', 'mujer.gif', 'sol.gif'];
@@ -30,19 +29,18 @@ function barajar(array) {
 function iniciarJuego(nivel) {
   
   if (nivel === 'facil') {
-    arraySeleccionado = cartasFacil; // conjunto actual de cartas
+    arraySeleccionado = cartasFacil; 
     cartasFacil = barajar(arraySeleccionado);
   } 
   else if (nivel === 'normal') {
-    arraySeleccionado = cartasNormal; // conjunto actual de cartas
+    arraySeleccionado = cartasNormal; 
     cartasNormal = barajar(arraySeleccionado); 
-     
-  
     
   }else if (nivel === 'dificil') {
-    arraySeleccionado = cartasDificil; // conjunto actual de cartas
+    arraySeleccionado = cartasDificil; 
     cartasDificil = barajar(arraySeleccionado);
   }
+  
   tiempo = 60;
   tablero.innerHTML = '';
   const imagenComun = 'logo_india.png'; // Ruta de la imagen común
@@ -62,38 +60,22 @@ function iniciarJuego(nivel) {
     const juego = document.getElementById('juego');
     juego.style.border = '7px rgb(252, 141, 114, 0.60) outset';
 
-    // Ocultar boton de 'jugar'
-   // const botonIniciar = document.getElementById('botonIniciar');
-   // botonIniciar.style.display = 'none';
 
     const botonFacil = document.getElementById('botonFacil');
     botonFacil.style.display = 'none';
 
-
-    //const botonNormal = document.getElementById('botonNormal');
-   // botonNormal.style.display = 'none';
-
-   // const botonDificil = document.getElementById('botonDificil');
-  //  botonDificil.style.display = 'none';
-
-    // Mostrar el boton de 'reiniciar'
     const botonReiniciar = document.getElementById('botonReiniciar');
     botonReiniciar.style.display = 'block';
 
     const botonSalir = document.getElementById('botonSalir');
     botonSalir.style.display = 'block';
 
-   
+        
+    const contador = document.getElementById('contador');
+    contador.style.display = 'block';
 
-   // const bienvenida = document.getElementById('mensajeBienvenida');
-   // bienvenida.style.display = 'none';
-    
-        // Mostrar el contador
-        const contador = document.getElementById('contador');
-        contador.style.display = 'block';
-
-        const menu = document.getElementById('menu');
-        menu.style.display = 'flex';
+    const menu = document.getElementById('menu');
+    menu.style.display = 'flex';
   });
   
       // Iniciar el contador
